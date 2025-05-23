@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-app.get('/api/:date?', (req, res) => {
+app.get('/api/timestamp/:date?', (req, res) => {
   // Retrieve the parameter. It might be a date string or a Unix timestamp.
   let { date } = req.params;
   let dateObj;
