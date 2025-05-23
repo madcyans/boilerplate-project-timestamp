@@ -31,6 +31,11 @@ app.get('/api/:date?', (req, res) => {
   });
 });
 
+// Optional: A simple root route so testing "/" doesn't give an error.
+app.get('/', (req, res) => {
+  res.send("Welcome to the Timestamp API! Use /api/:date? to get timestamp data.");
+});
+
 // Set the port (defaulting to 3000) and start the server.
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
